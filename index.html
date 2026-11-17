@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f3ea" />
+    <meta name="description" content="用幾道小問題，測出你是哪一種可愛動物性格。" />
+    <title>你是哪種小動物？｜PDP 動物性格測驗</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="小動物觀察室首頁"><span class="brand-mark">✳</span> 小動物觀察室</a>
+        <span class="top-note">PERSONALITY DISCOVERY PROJECT</span>
+      </header>
+
+      <section class="quiz-card" id="quiz-card" aria-live="polite">
+        <section class="screen intro-screen active" id="intro-screen">
+          <div class="intro-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> A LITTLE SELF DISCOVERY</p>
+            <h1>你是哪種<br /><span>小動物？</span></h1>
+            <p class="intro-description">你的直覺、習慣和小小堅持，<br class="desktop-break" />都藏著一種可愛的動物性格。</p>
+            <div class="intro-meta"><span>✦ 8 道情境題</span><span>◷ 約 2 分鐘</span></div>
+            <button class="primary-button" id="start-button">開始探索 <span aria-hidden="true">↗</span></button>
+            <p class="tiny-note">沒有標準答案，選最像你的那個就好。</p>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="sun-shape"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <span class="hero-spark spark-a">✳</span><span class="hero-spark spark-b">✦</span><span class="hero-spark spark-c">✧</span>
+            <div class="animal-blob blob-cat">🐱</div><div class="animal-blob blob-rabbit">🐰</div><div class="animal-blob blob-fox">🦊</div>
+            <div class="art-label">MEET YOUR<br />INNER ANIMAL</div>
+          </div>
+          <span class="card-index">01 <i>/</i> 03</span>
+        </section>
+
+        <section class="screen question-screen" id="question-screen" hidden>
+          <div class="question-top"><span class="question-kicker" id="question-kicker">01 / 08</span><span class="progress-label" id="progress-label">探索進度 12%</span></div>
+          <div class="progress-track" role="progressbar" aria-label="測驗進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
+          <div class="question-body"><p class="eyebrow">想像一下⋯⋯</p><h2 id="question-title"></h2><div class="answers" id="answers"></div></div>
+          <div class="question-bottom"><button class="text-button" id="back-button" type="button">← 上一題</button><span class="bottom-hint">憑直覺選就好 <span>✦</span></span></div>
+        </section>
+
+        <section class="screen result-screen" id="result-screen" hidden>
+          <div class="result-copy"><p class="eyebrow"><span class="eyebrow-dot"></span> YOUR INNER ANIMAL</p><p class="result-pretitle">你的性格圖鑑是</p><h2 id="result-name"></h2><p class="result-subtitle" id="result-subtitle"></p><p class="result-description" id="result-description"></p><div class="trait-list" id="trait-list"></div><div class="result-actions"><button class="primary-button" id="share-button">分享結果 <span aria-hidden="true">↗</span></button><button class="text-button restart-button" id="restart-button">再測一次 ↻</button></div><p class="tiny-note" id="share-status" aria-live="polite"></p></div>
+          <div class="result-art" aria-hidden="true"><div class="result-sun"></div><span class="result-spark rs-a">✦</span><span class="result-spark rs-b">✳</span><span class="result-animal" id="result-emoji"></span><div class="result-sticker">ONE OF A KIND<br /><span>✦</span></div></div>
+          <span class="card-index">03 <i>/</i> 03</span>
+        </section>
+      </section>
+      <footer><span>做自己的觀察家。 <b>✳</b></span><span class="footer-right">PDP · PERSONALITY DISCOVERY PROJECT</span></footer>
+    </main>
+    <div class="star-layer" id="star-layer" aria-hidden="true"></div>
+  </body>
+</html>
